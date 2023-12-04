@@ -1,0 +1,25 @@
+raster2pgsql.exe -s 27700 -N -32767 -t 254x254 -I -C -M -d D:\PostgreSQL\zad8\ras250_gb\data\*.tif uk_250k | psql.exe -d baza8 -h localhost -U postgres -p 5432
+
+ogr2ogr -f C:\Program Files\PostgreSQL\16 baza8 D:\PostgreSQL\zad8\OS_Open_Zoomstack.gpkg
+
+ogr2ogr -f C:\Program Files\PostgreSQL\16 "PG:dbname=baza8 user=postgres password=czego_tu_szukasz" D:\PostgreSQL\zad8\OS_Open_Zoomstack.gpkg
+
+ogr2ogr -f C:\Program Files\PostgreSQL\16\bin "PG:dbname=baza8 user=postgres password=password" D:\PostgreSQL\zad8\OS_Open_Zoomstack.gpkg -lco LAUNDER=NO
+
+
+D:\SQL\bin\raster2pgsql.exe -s 32630 -N -32767 -t 254x254 -I -C -M -d "D:\SQL\cw8\S2A\S2A_MSIL2A_20231130T112421_N0509_R037_T30UVF_20231130T145050.SAFE\GRANULE\L2A_T30UVF_A044078_20231130T112419\IMG_DATA\R10m\T30UVF_20231130T112421_B03_10m.jp2" sentinel2_band3_1 | psql -d cw8 -h localhost -U postgres -p 5432
+
+D:\SQL\bin\raster2pgsql.exe -s 32630 -N -32767 -t 254x254 -I -C -M -d "D:\SQL\cw8\S2A\S2A_MSIL2A_20231130T112421_N0509_R037_T30UVF_20231130T145050.SAFE\GRANULE\L2A_T30UVF_A044078_20231130T112419\IMG_DATA\R10m\T30UVF_20231130T112421_B08_10m.jp2" sentinel2_band8_1 | psql -d cw8 -h localhost -U postgres -p 5432
+
+D:\SQL\bin\raster2pgsql.exe -s 32630 -N -32767 -t 254x254 -I -C -M -d "D:\SQL\cw8\S2A\S2A_MSIL2A_20231110T112311_N0509_R037_T30UWF_20231110T150402.SAFE\GRANULE\L2A_T30UWF_A043792_20231110T112305\IMG_DATA\R10m\T30UWF_20231110T112311_B03_10m.jp2" sentinel2_band3_2 | psql -d cw8 -h localhost -U postgres -p 5432
+
+D:\SQL\bin\raster2pgsql.exe -s 32630 -N -32767 -t 254x254 -I -C -M -d "D:\SQL\cw8\S2A\S2A_MSIL2A_20231110T112311_N0509_R037_T30UWF_20231110T150402.SAFE\GRANULE\L2A_T30UWF_A043792_20231110T112305\IMG_DATA\R10m\T30UWF_20231110T112311_B08_10m.jp2" sentinel2_band8_2 | psql -d cw8 -h localhost -U postgres -p 5432
+
+
+raster2pgsql.exe -s 32630 -N -32767 -t 254x254 -I -C -M -d "D:\PostgreSQL\zad8\S2A_MSIL1C_20231110T112311_N0509_R037_T30UWF_20231110T132331.SAFE\GRANULE\L1C_T30UWF_A043792_20231110T112305\IMG_DATA\T30UWF_20231110T112311_B03.jp2" sentinel2_band3_1 | psql -d baza8 -h localhost -U postgres -p 5432
+
+raster2pgsql.exe -s 32630 -N -32767 -t 254x254 -I -C -M -d "D:\PostgreSQL\zad8\S2A_MSIL1C_20231110T112311_N0509_R037_T30UWF_20231110T132331.SAFE\GRANULE\L1C_T30UWF_A043792_20231110T112305\IMG_DATA\T30UWF_20231110T112311_B08.jp2" sentinel2_band8_1 | psql -d baza8 -h localhost -U postgres -p 5432
+
+raster2pgsql.exe -s 32630 -N -32767 -t 254x254 -I -C -M -d "D:\PostgreSQL\zad8\S2A_MSIL1C_20231130T112421_N0509_R037_T30UVF_20231130T132155.SAFE\GRANULE\L1C_T30UVF_A044078_20231130T112419\IMG_DATA\T30UVF_20231130T112421_B03.jp2" sentinel2_band3_2 | psql -d baza8 -h localhost -U postgres -p 5432
+
+raster2pgsql.exe -s 32630 -N -32767 -t 254x254 -I -C -M -d "D:\PostgreSQL\zad8\S2A_MSIL1C_20231130T112421_N0509_R037_T30UVF_20231130T132155.SAFE\GRANULE\L1C_T30UVF_A044078_20231130T112419\IMG_DATA\T30UVF_20231130T112421_B08.jp2" sentinel2_band8_2 | psql -d baza8 -h localhost -U postgres -p 5432
