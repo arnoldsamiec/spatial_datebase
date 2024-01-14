@@ -1,0 +1,38 @@
+sk.eyJ1Ijoic3V0b3dpY3oiLCJhIjoiY2xyYnlxZnh5MHNkZjJrcGoybWwzc294diJ9.EQiv0mMjfQsDECBxrivk8A
+
+curl -X POST "https://api.mapbox.com/uploads/v1/sutowicz/credentials?access_token=sk.eyJ1Ijoic3V0b3dpY3oiLCJhIjoiY2xyYnlxZnh5MHNkZjJrcGoybWwzc294diJ9.EQiv0mMjfQsDECBxrivk8A"
+
+{"bucket":"tilestream-tilesets-production",
+"key":"89/_pending/l8wfarhx2nm1re700josybrlc/sutowicz",
+"accessKeyId":"ASIATNLVGLR2CEQK5YLW",
+"secretAccessKey":"SAgRvxbRu1grVYGa4vsIPviroe1SdAWqhPtlbhJ0",
+"sessionToken":"FwoGZXIvYXdzEMX//////////wEaDHXNv7veq1JRr6nDfCKVAsYkJ6ShAjcNd0VMcYDKZX2IhKzJvL/Vvxmpe/OvEf22I2MaGUv4WZYQ+hDP0yLmbGvd8VmRT1m2dvrfNCfyiH9AbkA1WGGNhCCKTgUfOBrDdLX3iok+RIvpki3wqB0YMlRa558PnAux+dPHU/yKGXUjuUhEvqaYb8OhuiKej4lN3sP/Q3xj3eWalVz/uwxhkA3jFEpomXMiPMvrmIwzJfk3DNn+7d0vtzCUQdMSyZ34KUzFqTWpdZa2mcJWc3OpxGvOlDyURt8lvDJkFbwB9/oiJ2EGaOa/9oPu6x8WbYaR2OmqarlVMtkAMTcTees78ZkW78yV2oao4q/4H71B5zTRd+m4LtXDEY95VKirn5vBIUWjHOAozt6JrQYyKXYMjhBnkne+9BzpSe1iAVjpNiSKs4wUBxkVvuIurmKQ/1EuJyxpAD1L",
+"url":"https://tilestream-tilesets-production.s3.amazonaws.com/89/_pending/l8wfarhx2nm1re700josybrlc/sutowicz"}
+
+$env:AWS_ACCESS_KEY_ID="ASIATNLVGLR2CEQK5YLW"
+$env:AWS_SECRET_ACCESS_KEY="SAgRvxbRu1grVYGa4vsIPviroe1SdAWqhPtlbhJ0"
+$env:AWS_SESSION_TOKEN="FwoGZXIvYXdzEMX//////////wEaDHXNv7veq1JRr6nDfCKVAsYkJ6ShAjcNd0VMcYDKZX2IhKzJvL/Vvxmpe/OvEf22I2MaGUv4WZYQ+hDP0yLmbGvd8VmRT1m2dvrfNCfyiH9AbkA1WGGNhCCKTgUfOBrDdLX3iok+RIvpki3wqB0YMlRa558PnAux+dPHU/yKGXUjuUhEvqaYb8OhuiKej4lN3sP/Q3xj3eWalVz/uwxhkA3jFEpomXMiPMvrmIwzJfk3DNn+7d0vtzCUQdMSyZ34KUzFqTWpdZa2mcJWc3OpxGvOlDyURt8lvDJkFbwB9/oiJ2EGaOa/9oPu6x8WbYaR2OmqarlVMtkAMTcTees78ZkW78yV2oao4q/4H71B5zTRd+m4LtXDEY95VKirn5vBIUWjHOAozt6JrQYyKXYMjhBnkne+9BzpSe1iAVjpNiSKs4wUBxkVvuIurmKQ/1EuJyxpAD1L"
+
+aws s3 cp D:\PostgreSQL\bazy_danych\POI.zip s3://tilestream-tilesets-production/89/_pending/l8wfarhx2nm1re700josybrlc/sutowicz --region us-east-1
+
+curl -X POST -H "Content-Type: application/json" -H "Cache-Control: no-cache" -d '{
+  "url": "http://tilestream-tilesets-production.s3.amazonaws.com/89/_pending/l8wfarhx2nm1re700josybrlc/sutowicz",
+  "tileset": "sutowicz.POI",
+  "name": "POI"
+}' 'https://api.mapbox.com/uploads/v1/sutowicz?access_token=sk.eyJ1Ijoic3V0b3dpY3oiLCJhIjoiY2xyYnlxZnh5MHNkZjJrcGoybWwzc294diJ9.EQiv0mMjfQsDECBxrivk8A'
+
+
+{"id":"clrbz63b207my1mpgfx5zz9rk",
+"name":"POI",
+"complete":false,
+"error":null,
+"created":"2024-01-13T11:19:27.824Z",
+"modified":"2024-01-13T11:19:27.824Z",
+"tileset":"sutowicz.POI",
+"owner":"sutowicz",
+"progress":0}
+
+
+https://studio.mapbox.com/styles/sutowicz/clr9v8s2a005401peefnm8xaj/edit/#12.88/49.00898/8.39981
+
+https://studio.mapbox.com/styles/sutowicz/clr9s6ssm004v01r24vt13uly/edit/#9.61/41.7933/-87.4989
