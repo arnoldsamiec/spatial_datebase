@@ -1,0 +1,8 @@
+import requests
+
+url = 'http://DESKTOP-QIQT9LV/fmedatadownload/zad12/zad10.fmw?email=arnoldsamiec%40gmail.com&api=cfa32585-39fb-4300-9295-fa81a7b8041f&password=&e-mail_klienta=arnoldsamiec%40gmail.com&powiat=Kielce&chmury=40&data_poczatek=20230701000000&data_koniec=20230731000000&SourceDataset_SHAPEFILE=%24(FME_MF_DIR)powiaty.shp&DestDataset_GEOTIFF=D%3A%5CFME%5Cdane%5Cpowiaty&opt_showresult=false&opt_servicemode=async&opt_requesteremail=arnoldsamiec%40gmail.com'
+myobj = {'Authorization': 'fmetoken token=24086fda2fe0be4a70dd5dc16a781da3d319b8ef'}
+
+x = requests.post(url, headers = myobj)
+
+print(x.text)

@@ -1,0 +1,29 @@
+Name:
+Webhook - zad10 from zad12 - ce28d948-94a1-d194-9785-b92c4d5f9e13
+
+Token:
+24086fda2fe0be4a70dd5dc16a781da3d319b8ef
+
+Description:
+Allow users to run zad12/zad10 without logging in
+
+Created Date:
+2024-01-20T18:27:12.099Z
+
+Expiration Date:
+2025-01-19T23:00:00.000Z
+
+Enabled:
+true
+
+Authorization with Header:
+http://DESKTOP-QIQT9LV/fmedatadownload/zad12/zad10.fmw?email=arnoldsamiec%40gmail.com&api=cfa32585-39fb-4300-9295-fa81a7b8041f&password=&e-mail_klienta=arnoldsamiec%40gmail.com&powiat=Kielce&chmury=40&data_poczatek=20230701000000&data_koniec=20230731000000&SourceDataset_SHAPEFILE=%24(FME_MF_DIR)powiaty.shp&DestDataset_GEOTIFF=D%3A%5CFME%5Cdane%5Cpowiaty&opt_showresult=false&opt_servicemode=async&opt_requesteremail=arnoldsamiec%40gmail.com
+Header Key: Authorization
+Header Value: fmetoken token=24086fda2fe0be4a70dd5dc16a781da3d319b8ef
+
+Authorization with Query String:
+http://DESKTOP-QIQT9LV/fmedatadownload/zad12/zad10.fmw?email=arnoldsamiec%40gmail.com&api=cfa32585-39fb-4300-9295-fa81a7b8041f&password=&e-mail_klienta=arnoldsamiec%40gmail.com&powiat=Kielce&chmury=40&data_poczatek=20230701000000&data_koniec=20230731000000&SourceDataset_SHAPEFILE=%24(FME_MF_DIR)powiaty.shp&DestDataset_GEOTIFF=D%3A%5CFME%5Cdane%5Cpowiaty&opt_showresult=false&opt_servicemode=async&opt_requesteremail=arnoldsamiec%40gmail.com&token=24086fda2fe0be4a70dd5dc16a781da3d319b8ef
+
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\ArcGIS\ArcGIS Server 11.1
+
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\ArcGIS\ArcGIS Pro
